@@ -1,0 +1,92 @@
+/* TreeVisualization.css */
+.tree-container {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.node rect {
+    fill: white;
+    stroke: rgb(0, 0, 0);
+    stroke-width: 1px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.node rect:hover {
+    fill: #f0f0f0;
+}
+
+.node text {
+    font-size: 12px;
+    font-weight: 500;
+    text-anchor: middle;
+    dominant-baseline: middle;
+    user-select: none;
+    fill: #0d2697;
+}
+
+.link {
+    fill: none;
+    stroke: rgb(201, 44, 16) ;
+    stroke-width: 1px;
+}
+
+.url-box {
+    fill: #f8f9fa;
+    stroke: #dee2e6;
+    stroke-width: 1px;
+    rx: 4;
+    ry: 4;
+}
+
+.url-text {
+    font-size: 8px;
+    fill: #6c757d;
+}
+
+
+.blink {
+    animation: blink-bg 1s infinite;
+  }
+
+  @keyframes blink-bg {
+    0%, 100% {
+      fill : transparent;
+    }
+    50% {
+      fill : red;
+    }
+  }
+
+
+
+
+
+  .hideoverflowleft{
+    width: 80%;
+
+    
+    white-space: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Hide the overflow */
+    text-overflow: ellipsis; /* Show ellipsis if text is cut off */
+    direction: rtl; 
+    /* background-color: red;  */
+    font-size: large;
+    font-weight: 800;
+    /* padding: 0px 10px ; */
+   
+  }
+
+
+.a1{
+    flex: .6 ;
+
+}
+
+
+.a2{
+
+    flex: .4;
+
+}

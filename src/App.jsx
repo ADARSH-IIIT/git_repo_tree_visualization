@@ -1,23 +1,21 @@
 import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar.jsx'
-import Footer from './components/Footer.jsx'
-import Home from './pages/Home.jsx'
-import About from './pages/About.jsx'
-import Contact from './pages/Contact.jsx'
+import Landing_page from './pages/landing_page.jsx'
+import TreeVisualization from './pages/TreeVisualization.jsx'
+import SinglePage from './pages/SinglePage.jsx'
+
+
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
+
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+            
+          <Route path="/" element={< Landing_page />} />
+          <Route path="/:owner/:repo/:branch" element={< TreeVisualization />} />
+          <Route path="/singlepage" element={< SinglePage />} />
         </Routes>
-      </main>
-      <Footer />
-    </div>
+      
+     
   )
 }
 
